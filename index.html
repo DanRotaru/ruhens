@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruhens SG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+<!-- Header -->
+<component name="header"></component>
+<!-- Header -->
+
+<!-- Page content -->
+<main>
+    <component name="index" isPage="true"></component>
+</main>
+<!-- Page content -->
+
+<!-- Footer -->
+<component name="footer"></component>
+<!-- Footer -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="assets/script.js"></script>
+<script src="HashSPA.js"></script>
+<script>
+    HashSPA.init("HashSPA");
+    HashSPA.onchange = function(name){
+        indexScripts();
+        document.querySelectorAll('footer a').forEach(el => el.classList.remove('active'));
+        if(document.querySelector('footer a[href="#/'+name+'"]') !== null) document.querySelector('footer a[href="#/'+name+'"]').classList.add('active');
+    }
+</script>
+</body>
+</html> 
