@@ -14,7 +14,12 @@
 
 // window.onload = main;
 
-function indexScripts() {
+function indexScripts(name) {
+	document.querySelectorAll('header a').forEach((el) => el.classList.remove('active'));
+	if (document.querySelector(`header a[href="#/${name}"]`) !== null) {
+		document.querySelector(`header a[href="#/${name}"]`).classList.add('active');
+	}
+
 	$('.section3 .btn[data-tab]').click(function () {
 		$('.section3 .btn[data-tab]').removeClass('active');
 		$(this).addClass('active');
