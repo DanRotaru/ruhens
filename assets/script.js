@@ -27,4 +27,6 @@ function indexScripts(name) {
 		$(`.section3 .tab`).removeClass('active');
 		$(`.section3 .tab[data-tabId="${tab}"]`).addClass('active');
 	});
+
+	window.scrollTo(0, 0);
 }

@@ -1,3 +1,5 @@
+/* Created by DanRotaru */
+
 var HashSPA = {
 	title: 'Web',
 	defaults: {
